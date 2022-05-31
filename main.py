@@ -5,7 +5,7 @@ print('The available options are:',available_options)
 print('R-Rock, S-Scissors, P-Paper')
 sys_choice = random.choice(available_options)
 
-#To get the user input
+#To get the user input yes
 def user_input():
     global user_choice
     user_choice = input('Pick a choice? ')
