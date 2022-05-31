@@ -1,11 +1,13 @@
 import random
+
+from regex import R
 user_name = input('Your Username? ')
 available_options = ['R','S','P']
 print('The available options are:',available_options)
 print('R-Rock, S-Scissors, P-Paper')
 sys_choice = random.choice(available_options)
 
-#To get the user input yes
+#To get the user input 
 def user_input():
     global user_choice
     user_choice = input('Pick a choice? ')
@@ -46,6 +48,11 @@ def other_choices(user_choice, sys_choice):
             print('you lost! Scissors cuts paper')
             
 
-user_input()
+while True:
+    user_input()
+    play_again = input('Do you want to play again? Y/N')
+    play_again = play_again.lower().strip()
+    if play_again == 'n':
+        break
 
 
